@@ -10,7 +10,7 @@
   {% if cookiecutter.python == 'y' %}
   languages.python = {
     enable = true;
-    package = pkgs.python312;
+    package = pkgs.python{{ cookiecutter.python_version | replace('.', '') }};
     uv = {
       enable = true;
       sync.enable = true;
