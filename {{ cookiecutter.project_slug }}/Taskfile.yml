@@ -7,8 +7,11 @@ includes:
   devenv: taskfiles/devenv.taskfile.yml
   nix: taskfiles/nix.taskfile.yml
 
+vars:
+  GREETING: Hello, World!
+
 tasks:
   default:
     cmds:
-      - echo "Hello"
+      - echo "{{.GREETING}}"
     silent: true
