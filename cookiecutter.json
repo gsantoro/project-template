@@ -3,7 +3,8 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author": "gsantoro",
     "_copy_without_render": [
-        "taskfiles/**/*",
-        "Taskfile.yml"
-    ]
+        "Taskfile.yml",
+        "taskfiles/*.yml",
+        "taskfiles/*.yaml"
+      ]
   }
