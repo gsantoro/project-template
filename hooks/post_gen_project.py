@@ -14,6 +14,7 @@ def main():
     
     if python_enabled == 'y':
         subprocess.call(['uv', 'venv'])
+        subprocess.call(['uv', 'sync'])
         print("Python project initialized")
     
     

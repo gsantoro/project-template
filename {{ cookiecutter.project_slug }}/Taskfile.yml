@@ -4,10 +4,17 @@ version: '3'
 
 
 includes:
-  devenv: taskfiles/devenv.taskfile.yml
   nix: taskfiles/nix.taskfile.yml
+  devenv: taskfiles/devenv.taskfile.yml
+  direnv: taskfiles/direnv.taskfile.yml  
+
   cookiecutter: taskfiles/cookiecutter.taskfile.yml
 
+  {% if cookiecutter.k8s_enabled == 'y' %}
+  k8s: taskfiles/k8s.taskfile.yml
+  k8s-k3d: taskfiles/k8s.k3d.taskfile.yml
+  {% endif %}
+  
 tasks:
   default:
     cmds:

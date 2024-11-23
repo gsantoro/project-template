@@ -4,8 +4,20 @@
   # https://devenv.sh/packages/
   packages = [ 
     pkgs.git
+
+    {% if cookiecutter.k8s_enabled == 'y' %}
+    # k8s
+    pkgs.kubectl
+    pkgs.kubernetes-helm
+    pkgs.k3d  
+    pkgs.dive
+    pkgs.trivy
+    {% endif %}
+
+    # tools
     pkgs.gum
     pkgs.cookiecutter
+    pkgs.go-task
   ];
 
   {% if cookiecutter.python_enabled == 'y' %}

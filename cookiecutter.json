@@ -4,9 +4,8 @@
     "author": "gsantoro",
     "python_enabled": "y",
     "python_version": "3.12",
+    "k8s_enabled": "y",
     "_copy_without_render": [
-        "Taskfile.yml",
-        "taskfiles/*.yml",
-        "taskfiles/*.yaml"
+        "taskfiles/*"
       ]
   }
