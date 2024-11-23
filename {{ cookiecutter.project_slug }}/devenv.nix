@@ -7,7 +7,7 @@
     pkgs.gum
   ];
 
-  {% if cookiecutter.python == 'y' %}
+  {% if cookiecutter.python_enabled == 'y' %}
   languages.python = {
     enable = true;
     package = pkgs.python{{ cookiecutter.python_version | replace('.', '') }};

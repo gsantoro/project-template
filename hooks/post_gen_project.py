@@ -10,8 +10,12 @@ def main():
     # init direnv
     subprocess.call(['direnv', 'allow'])
     
-    # setup virtualenv
-    subprocess.call(['uv', 'venv'])
+    python_enabled = '{{ cookiecutter.python_enabled }}'
+    
+    if python_enabled == 'y':
+        subprocess.call(['uv', 'venv'])
+        print("Python project initialized")
+    
     
 if __name__ == '__main__':
     main()
