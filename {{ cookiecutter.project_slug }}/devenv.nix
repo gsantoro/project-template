@@ -5,6 +5,7 @@
   packages = [ 
     pkgs.git
     pkgs.gum
+    pkgs.cookiecutter
   ];
 
   {% if cookiecutter.python_enabled == 'y' %}
