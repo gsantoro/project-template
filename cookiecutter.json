@@ -6,6 +6,7 @@
     "python_version": "3.12",
     "k8s_enabled": "y",
     "_copy_without_render": [
-        "taskfiles/*"
+        "taskfiles/*.yml",
+        "taskfiles/*.yaml"
       ]
   }
